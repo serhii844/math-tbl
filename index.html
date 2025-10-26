@@ -1,50 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Тренажер таблиці множення</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Таблиця множення</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="container">
-    <header>
-      <h1>Тренажер таблиці множення</h1>
-    </header>
+  <main>
+    <div class="example-container">
+      <div id="example"></div>
+      <input type="number" id="answer" inputmode="numeric" autocomplete="off">
+      <span id="resultIcon"></span>
+    </div>
 
-    <section class="exercise-card" aria-live="polite">
-      <div class="example-row">
-        <div id="example" class="example">— × — =</div>
-        <div class="input-wrapper">
-          <input id="answer" inputmode="numeric" autocomplete="off" placeholder="?" />
-          <span id="errorMark" class="error-mark" hidden>❌</span>
-        </div>
-      </div>
+    <div class="stats">
+      <p><span class="label red">Помилки:</span> <span id="errorsCurrent">0</span></p>
+      <button id="checkBtn">Перевірити</button>
+      <p><span class="label">Вирішено прикладів:</span> <span id="solvedCount">0</span></p>
+      <p><span class="label">Всього помилок:</span> <span id="errorsTotal">0</span></p>
+    </div>
 
-      <div class="status-row">
-        <div class="errors">Помилки: <span id="currentErrors">0</span></div>
-      </div>
-
-      <div class="controls">
-        <button id="checkBtn">Перевірити</button>
-      </div>
-
-      <div class="counts">
-        <div>Вирішено прикладів: <span id="solvedCount">0</span></div>
-        <div>Всього помилок: <span id="totalErrors">0</span></div>
-      </div>
-
-      <div class="solved-list-area">
-        <h2>Розв’язані приклади</h2>
-        <ul id="solvedList" class="solved-list"></ul>
-      </div>
-
-      <div id="finalCodeArea" class="final-code" hidden>
-        Код: <span id="finalCode"></span>
-      </div>
-    </section>
+    <div id="solvedExamples"></div>
+    <div id="finalCode"></div>
+  </main>
 
   <script src="script.js"></script>
-  </main>
 </body>
 </html>
