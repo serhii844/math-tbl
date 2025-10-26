@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Таблица умножения — тренажёр</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Тренажёр: таблица умножения</h1>
+      <p class="hint">Решайте примеры. Настройки — в <code>config.json</code>.</p>
+    </header>
+
+    <section class="exercise-card" aria-live="polite">
+      <div class="example-row">
+        <div id="example" class="example">— × — =</div>
+        <input id="answer" inputmode="numeric" autocomplete="off" placeholder="Введите ответ" />
+      </div>
+
+      <div class="status-row">
+        <div>Помилки: <span id="currentErrors">0</span></div>
+      </div>
+
+      <div class="controls">
+        <button id="checkBtn">Перевірити:</button>
+      </div>
+
+      <div class="counts">
+        <div>Вирішено прикладів: <span id="solvedCount">0</span></div>
+        <div>Всього помилок: <span id="totalErrors">0</span></div>
+      </div>
+
+      <div class="solved-list-area">
+        <h2>Вирішені приклади:</h2>
+        <ul id="solvedList" class="solved-list"></ul>
+      </div>
+
+      <div id="finalCodeArea" class="final-code" aria-live="polite" hidden>
+        <h2>Код:</h2>
+        <div id="finalCode" class="code-box"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
