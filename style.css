@@ -1,0 +1,93 @@
+:root{
+  --bg:#f7f8fb;
+  --card:#ffffff;
+  --accent:#2b6cb0;
+  --muted:#6b7280;
+  --radius:12px;
+  --gap:12px;
+  --max-width:900px;
+  --shadow:0 6px 20px rgba(16,24,40,0.08);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif;background:var(--bg);color:#111}
+.container{
+  max-width:var(--max-width);
+  margin:36px auto;
+  padding:20px;
+}
+
+header h1{margin:0 0 6px;font-size:1.5rem}
+.hint{margin:0;color:var(--muted);font-size:0.95rem;}
+
+.exercise-card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:20px;
+  box-shadow:var(--shadow);
+  margin-top:18px;
+}
+
+.example-row{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  margin-bottom:14px;
+}
+
+.example{
+  font-size:clamp(1.4rem,2.5vw,2rem);
+  font-weight:700;
+  min-width:170px;
+  text-align:center;
+  padding:12px 16px;
+  border-radius:10px;
+  background:#f1f5f9;
+}
+
+#answer{
+  flex:1;
+  font-size:1.1rem;
+  padding:12px 14px;
+  border-radius:8px;
+  border:1px solid #e6e9ee;
+  outline:none;
+}
+
+#answer:focus{box-shadow:0 0 0 4px rgba(43,108,176,0.12)}
+
+.status-row{color:var(--muted);margin-bottom:10px}
+
+.controls{margin-bottom:14px}
+button#checkBtn{
+  background:var(--accent);
+  color:white;
+  border:none;
+  padding:10px 16px;
+  border-radius:10px;
+  font-size:1rem;
+  cursor:pointer;
+  box-shadow: 0 6px 14px rgba(43,108,176,0.18);
+}
+button#checkBtn:active{transform:translateY(1px)}
+
+.counts{display:flex;gap:18px;color:var(--muted);margin-bottom:14px}
+
+.solved-list-area h2{margin:8px 0 6px;font-size:1rem}
+.solved-list{list-style:none;padding:0;margin:0;max-height:260px;overflow:auto}
+.solved-list li{
+  padding:8px 10px;border-radius:8px;margin-bottom:8px;background:#fbfdff;border:1px solid #eef3fb;
+  display:flex;justify-content:space-between;align-items:center;font-size:0.98rem;
+}
+
+.final-code{margin-top:14px;padding:12px;border-radius:10px;background:#0f172a;color:white}
+.code-box{
+  font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+  font-size:1.2rem;padding:8px 12px;border-radius:8px;background:rgba(255,255,255,0.06);display:inline-block;
+}
+
+footer{margin-top:18px;color:var(--muted);font-size:0.85rem}
+@media (max-width:600px){
+  .example{min-width:110px;font-size:1.2rem}
+  .counts{flex-direction:column;gap:6px}
+}
