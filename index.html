@@ -8,18 +8,18 @@
 </head>
 <body>
   <main>
-    <div class="example-container">
-      <div id="example"></div>
+    <div class="example-line">
+      <span id="example"></span>
       <input type="number" id="answer" inputmode="numeric" autocomplete="off">
       <span id="resultIcon"></span>
     </div>
 
-    <div class="stats">
-      <p><span class="label red">Помилки:</span> <span id="errorsCurrent">0</span></p>
-      <button id="checkBtn">Перевірити</button>
-      <p><span class="label">Вирішено прикладів:</span> <span id="solvedCount">0</span></p>
-      <p><span class="label">Всього помилок:</span> <span id="errorsTotal">0</span></p>
-    </div>
+    <p class="errors"><strong>Помилки:</strong> <span id="errorsCurrent">0</span></p>
+
+    <button id="checkBtn">Перевірити</button>
+
+    <p><strong>Вирішено прикладів:</strong> <span id="solvedCount">0</span></p>
+    <p><strong>Всього помилок:</strong> <span id="errorsTotal">0</span></p>
 
     <div id="solvedExamples"></div>
     <div id="finalCode"></div>
